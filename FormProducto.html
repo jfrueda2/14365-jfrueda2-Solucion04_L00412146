@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto</title>
+  <link rel="stylesheet" href="estiloProducto.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Datos Básicos</h2>
+  <div class="form-box">
+    <form id="datosBasicosForm">
+      <label for="nombreProducto">Nombre del Producto:</label>
+      <input type="text" id="nombreProducto" name="nombreProducto" required><br><br>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+
+      <label for="fileInput">Foto:</label>
+      <input type="file" id="fileInput" name="fileInput" style="display: none;">
+      <label for="fileInput" class="examinar-btn">Examinar...</label>
+      <span id="fileLabel">No se ha seleccionado ningún archivo.</span><br><br>
+
+      <input type="checkbox" id="infoConfidencialCheckbox">
+      <label for="infoConfidencialCheckbox">Añadir información confidencial</label><br><br>
+
+      <div id="infoConfidencialForm" style="display: none;">
+        <h3>Datos Económicos</h3>
+        <label for="precio">Precio:</label>
+        <div class="numeric-input">
+          <input type="number" id="precio" name="precio" min="0" value="0">
+          <span>$</span>
+        </div><br><br>
+
+        <label for="impuestos">Impuestos:</label>
+        <select id="impuestos" name="impuestos">
+          <option value="">Seleccione un porcentaje</option>
+          <!-- Agrega las opciones del 1 al 100% -->
+          <!-- Por ejemplo: -->
+          <option value="1">1%</option>
+          <option value="2">5%</option>
+          <option value="2">10%</option>
+          <option value="2">20%</option>
+          <option value="2">30%</option>
+          <option value="2">50%</option>
+          <option value="2">75%</option>
+          <option value="100">100%</option>
+        </select><br><br>
+
+        <label>Promoción:</label>
+        <input type="radio" id="ninguno" name="promocion" value="Ninguno" checked>
+        <label for="ninguno">Ninguno</label>
+
+        <input type="radio" id="transporteGratuito" name="promocion" value="Transporte Gratuito">
+        <label for="transporteGratuito">Transporte Gratuito</label>
+
+        <input type="radio" id="descuento5" name="promocion" value="Descuento 5%">
+        <label for="descuento5">Descuento 5%</label><br><br>
+      </div>
+
+      <button type="submit" id="guardarBtn">Guardar Cambios</button>
+      <button type="button" id="borrarBtn">Borrar Datos</button>
+    </form>
+  </div>
+</div>
+
+<script src="javaProducto.js"></script>
+
+</body>
+</html>

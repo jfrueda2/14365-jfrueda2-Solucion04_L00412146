@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="estiloRegistro.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>DIRECCION DE ENVIO</h2>
+  <div class="form-box">
+    <form id="direccionEnvioForm">
+      <label for="callePrincipal">Calle Principal:</label>
+      <input type="text" id="callePrincipal" name="callePrincipal" required><br><br>
+
+      <label for="transversal">Transversal:</label>
+      <input type="text" id="transversal" name="transversal" required><br><br>
+
+      <label for="entregaPropietario">Entrega de propietario:</label>
+      <input type="checkbox" id="entregaPropietario" name="entregaPropietario"><br><br>
+
+      <label for="entregaTercero">Entrega a un tercero:</label>
+      <input type="checkbox" id="entregaTercero" name="entregaTercero"><br><br>
+
+      <label for="cantones">Cantones:</label>
+      <select id="cantones" name="cantones">
+        <option value="Mejía">Mejía</option>
+        <option value="Rumiñahui">Rumiñahui</option>
+        <option value="Quito">Quito</option>
+        <option value="Pedro Moncayo">Pedro Moncayo</option>
+        <option value="Cayambe">Cayambe</option>
+        <option value="San Miguel de los Bancos">San Miguel de los Bancos</option>
+        <option value="Puerto Quito">Puerto Quito</option>
+        <option value="Pedro Vicente Maldonado">Pedro Vicente Maldonado</option>
+      </select><br><br>
+
+      <div id="infoConfidencial" style="display: none;">
+        <h2>INFORMACIÓN CONFIDENCIAL</h2>
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" name="codigoPostal"><br><br>
+
+        <label for="referenciaDireccion">Referencia de la Dirección:</label><br>
+        <textarea id="referenciaDireccion" name="referenciaDireccion" rows="4" cols="50"></textarea><br><br>
+      </div>
+
+      <button type="submit" id="enviarDatosBtn" disabled>ENVIAR DATOS</button>
+      <button type="button" id="guardarBtn" style="display: none;">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<script src="javaRegistro.js"></script>
+
+</body>
+</html>
